@@ -7,11 +7,11 @@ namespace Bakery
   {
     public static int GetPrice(int quantity)
     {
-      int number = quantity/3;
-      int remainder = quantity%3;
-      Console.WriteLine(number.ToString());
-      Console.WriteLine(remainder.ToString());
-      return 5;
+      int btgoNumber = quantity/3;
+      int fullPriceRemainder = quantity%3;
+      Console.WriteLine(btgoNumber.ToString());
+      Console.WriteLine(fullPriceRemainder.ToString());      
+      return btgoNumber*10+fullPriceRemainder*5;
     }
   }
 
