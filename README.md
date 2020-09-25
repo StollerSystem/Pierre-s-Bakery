@@ -33,7 +33,7 @@ Pastry: Buy 1 for \$2 or 3 for $5.
 
 * 7 Add a Bread Object to shopping cart (list)
 
-* 8 Add a Bread Object to shopping cart (list)
+* 8 Add a Pastry Object to shopping cart (list)
 
 * Return the total cost of the order:
     *  Bread: Buy 2, get 1 free. A single loaf costs $5.

@@ -7,12 +7,17 @@ namespace Bakery
 {
   public class ShoppingCart 
   {
-    public static List<Bread> _breadCart = new List<Bread> {};
+    private static List<Bread> _breadCart = new List<Bread> {};
     public static List<Pastry> _pastryCart = new List<Pastry> {};
 
     public static void AddBread(Bread Bread)
     {      
       _breadCart.Add(Bread);
+    }
+
+    public static List<Bread> GetBread()
+    {
+      return _breadCart;
     }
 
     public static void AddPastry(Pastry Pastry)

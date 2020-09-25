@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Bakery
 {   
@@ -17,16 +18,27 @@ namespace Bakery
       while (shopping)
       {
         // print cart here
-        Console.WriteLine("'sd' to add Sour Dough Bread");
+        Console.WriteLine($"Shpping cart: ");
+        List<Bread> breadCart = ShoppingCart.GetBread();
+        foreach (Bread bread in breadCart)
+        {
+          Console.WriteLine(bread.Description);
+        }
+
+        Console.WriteLine("\n'sd' to add Sour Dough Bread");
         string userInput = Console.ReadLine().ToLower();
 
         switch (userInput)
         {
           case ("sd"):
-          // ADD SOUR DOUGH
+            // ADD SOUR DOUGH
+            Bread sourDough = new Bread("Sour Dough");
+            ShoppingCart.AddBread(sourDough);
             Console.WriteLine("Sour dough added!");
             break;
+
           case ("d"):
+            //DONE
             Console.WriteLine("done!");
             shopping = false;
             break;
