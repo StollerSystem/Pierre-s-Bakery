@@ -68,7 +68,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void ShoppingCart_AddPastryToList_Pastry()
     {
-     Pastry muffin = new Pastry("Muffin");
+      Pastry muffin = new Pastry("Muffin");
       ShoppingCart.AddPastry(muffin);
       List<Pastry> pastryCart = ShoppingCart.GetPastry();
       Assert.AreEqual(muffin.Description,pastryCart[0].Description);
@@ -88,6 +88,29 @@ namespace Bakery.Tests
       List<Pastry> newList2 = new List<Pastry> { };
       List<Pastry> result = ShoppingCart.GetPastry();
       CollectionAssert.AreEqual(newList2,result);
+    }
+
+    [TestMethod]
+    public void ShoppingCart_GetGrandTotal_int()
+    {
+      Bread sourDough = new Bread("Sour Dough");
+      ShoppingCart.AddBread(sourDough);
+      ShoppingCart.AddBread(sourDough);
+      ShoppingCart.AddBread(sourDough);
+      ShoppingCart.AddBread(sourDough);
+      ShoppingCart.AddBread(sourDough);
+      List<Bread> breadCart = ShoppingCart.GetBread();
+      Console.WriteLine(breadCart.Count);
+      Pastry muffin = new Pastry("Muffin");
+      ShoppingCart.AddPastry(muffin);
+      ShoppingCart.AddPastry(muffin);
+      ShoppingCart.AddPastry(muffin);
+      ShoppingCart.AddPastry(muffin);
+      ShoppingCart.AddPastry(muffin);
+      List<Pastry> pastryCart = ShoppingCart.GetPastry();
+      Console.WriteLine(pastryCart.Count);
+      int total = ShoppingCart.GetTotal();
+      Assert.AreEqual(29,total);
     }
   }
 }

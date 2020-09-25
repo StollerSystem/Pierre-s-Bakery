@@ -35,6 +35,13 @@ namespace Bakery
       _breadCart.Clear();
       _pastryCart.Clear();
     }
+
+    public static int GetTotal()
+    {
+      int breadTotal = Bread.GetPrice(_breadCart.Count);
+      int pastryTotal = Pastry.GetPrice(_pastryCart.Count);
+      return breadTotal+pastryTotal;
+    }
   }
 
 
