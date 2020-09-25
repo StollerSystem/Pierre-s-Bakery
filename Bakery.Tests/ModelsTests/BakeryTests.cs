@@ -22,9 +22,14 @@ namespace Bakery.Tests
 
     [TestMethod]
     public void BreadGetPrice_ReturnsTotalPrice_int()
-    {
-      // Bread.GetPrice(10);
+    {      
       Assert.AreEqual(35, Bread.GetPrice(10));
+    }
+
+    [TestMethod]
+    public void PastryGetPrice_ReturnsTotalPrice_int()
+    {      
+      Assert.AreEqual(17, Pastry.GetPrice(10));
     }
   }
 }

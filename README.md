@@ -24,8 +24,8 @@ Pastry: Buy 1 for \$2 or 3 for $5.
   * output: 35
 
 * Get price from Pastry based on quantity. Pastry: Buy 1 for $2 or 3 for $5.
-  * input: 5
-  * output: 
+  * input: 10
+  * output: 17
 
 * Add a Bread or Pastry Object to shopping cart (list)
 

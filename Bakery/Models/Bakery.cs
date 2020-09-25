@@ -9,14 +9,17 @@ namespace Bakery
     {
       int btgoNumber = quantity/3;
       int fullPriceRemainder = quantity%3;
-      Console.WriteLine(btgoNumber.ToString());
-      Console.WriteLine(fullPriceRemainder.ToString());      
+      // Console.WriteLine(btgoNumber.ToString());
+      // Console.WriteLine(fullPriceRemainder.ToString());      
       return btgoNumber*10+fullPriceRemainder*5;
     }
   }
 
   public class Pastry
   {
-    // properties, constructors, methods, etc. go here
+    public static int GetPrice(int quantity)
+    {      
+      return 5;
+    }
   }
 }
