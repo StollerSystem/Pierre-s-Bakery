@@ -4,7 +4,7 @@ using Bakery;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class BakeryTests
   {
     [TestMethod]
     public void ItemConstructor_CreatesInstanceOfItem_Item()

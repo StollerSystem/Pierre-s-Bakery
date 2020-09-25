@@ -2,3 +2,16 @@ C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debu
 C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.AssemblyInfoInputs.cache
 C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.AssemblyInfo.cs
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Bakery.Tests.deps.json
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Bakery.Tests.runtimeconfig.json
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Bakery.Tests.runtimeconfig.dev.json
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Bakery.Tests.dll
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Bakery.Tests.pdb
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Bakery.dll
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\bin\Debug\netcoreapp2.2\Bakery.pdb
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.csproj.CopyComplete
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.dll
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.pdb

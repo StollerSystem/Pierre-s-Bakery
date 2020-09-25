@@ -1,0 +1,9 @@
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\bin\Debug\netcoreapp2.2\Bakery.deps.json
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\bin\Debug\netcoreapp2.2\Bakery.dll
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\bin\Debug\netcoreapp2.2\Bakery.pdb
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.csprojAssemblyReference.cache
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.AssemblyInfoInputs.cache
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.AssemblyInfo.cs
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.dll
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.pdb
