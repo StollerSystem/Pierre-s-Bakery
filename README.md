@@ -19,7 +19,13 @@ Pastry: Buy 1 for \$2 or 3 for $5.
 
 * Constructor will create a "Pastry" Object 
 
-* Get Price from Bread and Pastry Obects
+* Get price from Bread based on quantity. Bread: Buy 2, get 1 free. A single loaf costs $5.
+  * input: 10
+  * output: 35
+
+* Get price from Pastry based on quantity. Pastry: Buy 1 for $2 or 3 for $5.
+  * input: 5
+  * output: 
 
 * Add a Bread or Pastry Object to shopping cart (list)
 
