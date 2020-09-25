@@ -8,7 +8,7 @@ namespace Bakery
   public class ShoppingCart 
   {
     private static List<Bread> _breadCart = new List<Bread> {};
-    public static List<Pastry> _pastryCart = new List<Pastry> {};
+    private static List<Pastry> _pastryCart = new List<Pastry> {};
 
     public static void AddBread(Bread Bread)
     {      
@@ -23,6 +23,11 @@ namespace Bakery
     public static void AddPastry(Pastry Pastry)
     {      
       _pastryCart.Add(Pastry);
+    }
+
+    public static List<Pastry> GetPastry()
+    {
+      return _pastryCart;
     }
 
     public static void ClearAll()

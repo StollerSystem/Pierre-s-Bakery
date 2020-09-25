@@ -65,14 +65,14 @@ namespace Bakery.Tests
       Assert.AreEqual(sourDough.Description,breadCart[0].Description);
     }
 
-    // [TestMethod]
-    // public void ShoppingCart_AddPastryToList_Pastry()
-    // {
-    //  Pastry muffin = new Pastry("Muffin");
-    //   ShoppingCart.AddPastry(muffin);
-    //   List<Bread> breadCart = ShoppingCart.GetBread();
-    //   Assert.AreEqual(muffin.Description,breadCart[0].Description);
-    // }
+    [TestMethod]
+    public void ShoppingCart_AddPastryToList_Pastry()
+    {
+     Pastry muffin = new Pastry("Muffin");
+      ShoppingCart.AddPastry(muffin);
+      List<Pastry> pastryCart = ShoppingCart.GetPastry();
+      Assert.AreEqual(muffin.Description,pastryCart[0].Description);
+    }
 
     [TestMethod]
     public void GetBread_ReturnsEmtpyList_BreadList()
@@ -80,6 +80,14 @@ namespace Bakery.Tests
       List<Bread> newList = new List<Bread> { };
       List<Bread> result = ShoppingCart.GetBread();
       CollectionAssert.AreEqual(newList,result);
+    }
+
+    [TestMethod]
+    public void GetPastry_ReturnsEmtpyList_PastryList()
+    {
+      List<Pastry> newList2 = new List<Pastry> { };
+      List<Pastry> result = ShoppingCart.GetPastry();
+      CollectionAssert.AreEqual(newList2,result);
     }
   }
 }
