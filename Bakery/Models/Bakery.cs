@@ -19,7 +19,9 @@ namespace Bakery
   {
     public static int GetPrice(int quantity)
     {      
-      return 5;
+      int three4Five = quantity/3;
+      int one4Two = quantity%3;
+      return three4Five*5+one4Two*2;
     }
   }
 }
