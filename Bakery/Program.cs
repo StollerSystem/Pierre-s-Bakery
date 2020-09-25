@@ -88,99 +88,70 @@ namespace Bakery
       switch (inputSplit[0])
         {
           case ("1"):
-
-            Bread sourDough = new Bread("Sour Dough Loaf");
-
-            // int qty = 1;
+            Bread sourDough = new Bread("Sour Dough Loaf");            
             if (inputSplit.Length > 1)
             {
-              AddMultipleBread(inputSplit[1],sourDough);
-              // bool canConvert = int.TryParse(inputSplit[1], out qty);
-              // if (canConvert)
-              // {                
-              //   for (int i = 0; i < qty; i++)
-              //   {
-              //     ShoppingCart.AddBread(sourDough);                  
-              //   }
-              //   Console.WriteLine($"\n*** {qty.ToString()} Sour dough Loafs added! ***");
-              // } else
-              // {
-              //   Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
-              // }
+              AddMultipleBread(inputSplit[1],sourDough);              
             } else
             {
               ShoppingCart.AddBread(sourDough);            
               Console.WriteLine("\n*** Sour dough Loaf added! ***");
             }   
             return true;
-
-
-
           case ("2"):
-            Bread wheat = new Bread("Wheat Loaf");
-
-            // int qty2 = 1;
+            Bread wheat = new Bread("Wheat Loaf");            
             if (inputSplit.Length > 1)
             {
-              AddMultipleBread(inputSplit[1],wheat);
-              // bool canConvert = int.TryParse(inputSplit[1], out qty2);
-              // if (canConvert)
-              // {                
-              //   for (int i = 0; i < qty2; i++)
-              //   {
-              //     ShoppingCart.AddBread(wheat);                  
-              //   }
-              //   Console.WriteLine($"\n*** {qty2.ToString()} Sour Wheat Loafs added! ***");
-              // } else
-              // {
-              //   Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
-              // }
+              AddMultipleBread(inputSplit[1],wheat);              
             } else
             {
               ShoppingCart.AddBread(wheat);
               Console.WriteLine("\n*** Wheat Loaf added! ***");
             }            
             return true;
-
           case ("3"):
-            Bread rye = new Bread("Rye Loaf");
-            // int qty3 = 1;
+            Bread rye = new Bread("Rye Loaf");            
             if (inputSplit.Length > 1)
             {
-              AddMultipleBread(inputSplit[1],rye);
-              // bool canConvert = int.TryParse(inputSplit[1], out qty3);
-              // if (canConvert)
-              // {                
-              //   for (int i = 0; i < qty3; i++)
-              //   {
-              //     ShoppingCart.AddBread(rye);                  
-              //   }
-              //   Console.WriteLine($"\n*** {qty3.ToString()} Sour Rye Loafs added! ***");
-              // } else
-              // {
-              //   Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
-              // }
+              AddMultipleBread(inputSplit[1],rye);              
             } else
             {
               ShoppingCart.AddBread(rye);
               Console.WriteLine("\n*** Rye Loaf added! ***");
             }            
-            return true;
-            
+            return true;            
           case ("4"):
             Pastry scone = new Pastry("Scone Pastry");
-            ShoppingCart.AddPastry(scone);
-            Console.WriteLine("\n*** Scone Pastry added! ***");
+            if (inputSplit.Length > 1)
+            {
+              AddMultiplePastry(inputSplit[1],scone);              
+            } else
+            {
+              ShoppingCart.AddPastry(scone);
+              Console.WriteLine("\n*** Scone Pastry added! ***");
+            }            
             return true;
           case ("5"):
             Pastry muffin = new Pastry("Muffin Pastry");
-            ShoppingCart.AddPastry(muffin);
-            Console.WriteLine("\n*** Muffin Pastry added! ***");
+             if (inputSplit.Length > 1)
+            {
+              AddMultiplePastry(inputSplit[1],muffin);              
+            } else
+            {
+              ShoppingCart.AddPastry(muffin);
+              Console.WriteLine("\n*** Muffin Pastry added! ***");
+            }            
             return true;
           case ("6"):
             Pastry croissant = new Pastry("Croissant Pastry");
-            ShoppingCart.AddPastry(croissant);
-            Console.WriteLine("\n*** Croissant Pastry added! ***");
+             if (inputSplit.Length > 1)
+            {
+              AddMultiplePastry(inputSplit[1],croissant);              
+            } else
+            {
+              ShoppingCart.AddPastry(croissant);
+              Console.WriteLine("\n*** Croissant Pastry added! ***");
+            }            
             return true;
           case ("c"):            
             Console.WriteLine("\n*** Cart cleared! ***");
@@ -230,6 +201,23 @@ namespace Bakery
       } else
       {
         Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
+      }
+    }
+
+    public static void AddMultiplePastry(string quantity, Pastry pastry)
+    {
+      int qty = 1;
+      bool canConvert = int.TryParse(quantity, out qty);
+      if (canConvert)
+      {                
+        for (int i = 0; i < qty; i++)
+        {
+          ShoppingCart.AddPastry(pastry);                  
+        }
+        Console.WriteLine($"\n*** {qty.ToString()} {pastry.Description} added! ***");
+      } else
+      {
+        Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by QUANTITY. Type 'm' to see the menu. ***");
       }
     }
   }
