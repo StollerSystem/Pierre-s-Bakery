@@ -25,7 +25,11 @@ namespace Bakery
       _pastryCart.Add(Pastry);
     }
 
-
+    public static void ClearAll()
+    {
+      _breadCart.Clear();
+      _pastryCart.Clear();
+    }
   }
 
 

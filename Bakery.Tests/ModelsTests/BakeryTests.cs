@@ -1,11 +1,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System;
 using Bakery;
 
-namespace Bakery.Tests
+
+namespace Bakery.Tests  
 {
   [TestClass]
-  public class BakeryTests
+  public class BakeryTests : IDisposable
   {
+    public void Dispose()
+    {
+      ShoppingCart.ClearAll();
+    }
+
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
@@ -53,15 +61,25 @@ namespace Bakery.Tests
     {
       Bread sourDough = new Bread("Sour Dough");
       ShoppingCart.AddBread(sourDough);
-      Assert.AreEqual(sourDough.Description,ShoppingCart._breadCart[0].Description);
+      List<Bread> breadCart = ShoppingCart.GetBread();
+      Assert.AreEqual(sourDough.Description,breadCart[0].Description);
     }
 
+    // [TestMethod]
+    // public void ShoppingCart_AddPastryToList_Pastry()
+    // {
+    //  Pastry muffin = new Pastry("Muffin");
+    //   ShoppingCart.AddPastry(muffin);
+    //   List<Bread> breadCart = ShoppingCart.GetBread();
+    //   Assert.AreEqual(muffin.Description,breadCart[0].Description);
+    // }
+
     [TestMethod]
-    public void ShoppingCart_AddPastryToList_Pastry()
+    public void GetBread_ReturnsEmtpyList_BreadList()
     {
-     Pastry muffin = new Pastry("Muffin");
-      ShoppingCart.AddPastry(muffin);
-      Assert.AreEqual(muffin.Description,ShoppingCart._pastryCart[0].Description);
+      List<Bread> newList = new List<Bread> { };
+      List<Bread> result = ShoppingCart.GetBread();
+      CollectionAssert.AreEqual(newList,result);
     }
   }
 }
