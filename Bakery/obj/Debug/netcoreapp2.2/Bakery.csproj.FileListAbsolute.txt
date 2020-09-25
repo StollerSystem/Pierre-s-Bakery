@@ -7,3 +7,5 @@ C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netc
 C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.AssemblyInfo.cs
 C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.dll
 C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\obj\Debug\netcoreapp2.2\Bakery.pdb
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\bin\Debug\netcoreapp2.2\Bakery.runtimeconfig.json
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery\bin\Debug\netcoreapp2.2\Bakery.runtimeconfig.dev.json

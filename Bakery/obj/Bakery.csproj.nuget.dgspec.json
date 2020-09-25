@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\Bakery\\Bakery.csproj": {}
+    "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\bakery\\Bakery.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\Bakery\\Bakery.csproj": {
+    "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\bakery\\Bakery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\Bakery\\Bakery.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\bakery\\Bakery.csproj",
         "projectName": "Bakery",
-        "projectPath": "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\Bakery\\Bakery.csproj",
+        "projectPath": "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\bakery\\Bakery.csproj",
         "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\Bakery\\obj\\",
+        "outputPath": "C:\\Users\\Owner\\Epicodus\\C#\\friday_projects\\Bakery.Solution\\bakery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
