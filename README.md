@@ -27,6 +27,8 @@ Pastry: Buy 1 for \$2 or 3 for $5.
   * input: 10
   * output: 17
 
+* Create a Bread object with a description 
+
 * Add a Bread or Pastry Object to shopping cart (list)
 
 * Return the total cost of the order:
