@@ -13,7 +13,17 @@ Pastry: Buy 1 for \$2 or 3 for $5.
 
 After pressing a key to continue the user will be presented with a menu.
 On the menu it lists all the bread/pastry for sale as well as the key number to enter to add it to your cart. 
-The user can add a single item OR if they follow the item number with a quantity - they can add multiple items at once. Example:
+
+------------MENU------------
+'1' to add Sour Dough Bread
+'2' to add Wheat Bread
+'3' to add Rye Bread
+'4' to add Scone Pastry
+'5' to add Muffin Pastry
+'6' to add Croissant Pastry
+----------------------------
+
+The user can add a single item OR if they follow the item number with space then a quantity - they can add multiple items at once. Example:
 * Typing '3 10' will add 10 Rye Loafs (#3) 
 
 There are also these commands:

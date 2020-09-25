@@ -44,7 +44,6 @@ namespace Bakery
     }
   }
 
-
   public class Bread
   {
     public string Description { get; set; }

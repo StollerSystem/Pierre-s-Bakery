@@ -11,7 +11,7 @@ namespace Bakery
       Console.WriteLine("|  *** Welcome to Pierre's Bakery ***  |");
       Console.WriteLine("----------------------------------------");
       Console.WriteLine("\n--------------[Our Prices:]-------------");      
-      Console.WriteLine("Bread: Single loaf $5 (Buy 2 get 1 free!)");
+      Console.WriteLine("Bread: Single loaf $5 Buy 2 get 1 free!");
       Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5!");
       Console.WriteLine("----------------------------------------");
       Console.WriteLine("\nPress any key to continue...");
@@ -42,7 +42,7 @@ namespace Bakery
         Console.WriteLine("Type 'd' when you're done");
         Console.WriteLine("----------------------------");
         Console.WriteLine("\n(Type the number, then hit enter to add the item to your cart)");
-        Console.WriteLine("(If wanting to add multiple items, follow the number with a quantity)");
+        Console.WriteLine("(If wanting to add multiple items, follow the number with a space then a quantity)");
         Console.WriteLine("(Example: typing '1 6' will add 6 Sour Dough Loafs)");
       }
 
@@ -77,14 +77,12 @@ namespace Bakery
       Console.WriteLine("----------------------"); 
       Console.WriteLine($"  [Grand Total: ${grandTotal}]");
       Console.WriteLine("----------------------"); 
-      Console.WriteLine("\n(Type 'm' to see the menu, 'c' to clear the cart, and 'd' when done.)");
-      
+      Console.WriteLine("\n(Type 'm' to see the menu, 'c' to clear the cart, and 'd' when done.)");      
     }
 
     public static bool UserInput(string userInput)
     {
       string[] inputSplit = userInput.Split(' ');
-
       switch (inputSplit[0])
         {
           case ("1"):
@@ -183,8 +181,10 @@ namespace Bakery
       Console.WriteLine($"   [Bread Qty: {breadQuantity.ToString()} / Pastry Qty: {pastryQuantity.ToString()}]\n");
       Console.WriteLine($"        [Grand Total: ${grandTotal}]\n");
       Console.WriteLine($"        [You Saved: ${saveTotal}!!!]\n");      
-      Console.WriteLine("         <<<Thank you!>>>");
+      Console.WriteLine("         <<<Thank you!>>>\n");
+      Console.WriteLine("            -Pierre");
       Console.WriteLine("----------------------------------");
+      Console.WriteLine("\n\n\n   [{(< Built by Ben Stoller >)}]");
     }
 
     public static void AddMultipleBread(string quantity, Bread bread)
