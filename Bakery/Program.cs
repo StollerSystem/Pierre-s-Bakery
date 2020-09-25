@@ -7,7 +7,7 @@ namespace Bakery
   {
     public static void Main() 
     { 
-      Console.WriteLine("\n----------------------------------------");
+      Console.WriteLine("\n\n----------------------------------------");
       Console.WriteLine("|  *** Welcome to Pierre's Bakery ***  |");
       Console.WriteLine("----------------------------------------");
       Console.WriteLine("\nOur Prices:");
@@ -79,8 +79,7 @@ namespace Bakery
     }
     public static void PrintMenu()
       {
-        Console.WriteLine("\n----------------------");
-        Console.WriteLine("Type the number, then hit enter to add the item to your cart");
+        Console.WriteLine("\n-----------MENU-----------");        
         Console.WriteLine("'1' to add Sour Dough Bread");
         Console.WriteLine("'2' to add Wheat Bread");
         Console.WriteLine("'3' to add Rye Bread");
@@ -90,7 +89,8 @@ namespace Bakery
         Console.WriteLine("Type 'c' to clear your cart!");
         Console.WriteLine("Type 'm' to see the menu!");
         Console.WriteLine("Type 'd' when you're done!");
-        Console.WriteLine("----------------------");
+        Console.WriteLine("--------------------------");
+        Console.WriteLine("\n(Type the number, then hit enter to add the item to your cart)");
       }
 
     public static void PrintCart()
@@ -101,20 +101,30 @@ namespace Bakery
       List<Pastry> pastryCart = ShoppingCart.GetPastry();
       if (breadCart.Count == 0 && pastryCart.Count == 0)
       {
-        Console.WriteLine(" -Empty!");
+        Console.WriteLine(" -(Empty)");
       } else 
       {
           foreach (Bread bread in breadCart)
         {
-          Console.WriteLine(" -"+bread.Description);
-        }          
+          Console.WriteLine($" -({bread.Description})");
+        }  
+        int breadQuantity = ShoppingCart.GetBread().Count;
+        int breadSubTotal = Bread.GetPrice(breadQuantity);
+        Console.WriteLine($"  [Bread subtotal: ${breadSubTotal.ToString()}]"); 
+
         foreach (Pastry pastry in pastryCart)
         {
-          Console.WriteLine(" -"+pastry.Description);
+          Console.WriteLine($" -({pastry.Description})");
         }
+        int pastryQuantity = ShoppingCart.GetPastry().Count;
+        int pastrySubTotal = Pastry.GetPrice(pastryQuantity);
+        Console.WriteLine($"  [Pastry subtotal: ${pastrySubTotal.ToString()}]");
       }
+      string grandTotal = ShoppingCart.GetTotal().ToString();
       Console.WriteLine("----------------------"); 
-      Console.WriteLine("(Type 'm' to see the menu)");
+      Console.WriteLine($"  [Grand Total: ${grandTotal}");
+      Console.WriteLine("----------------------"); 
+      Console.WriteLine("(Type 'm' to see the menu, 'c' to clear the cart, and 'd' when done.)");
     }
   }
 }
