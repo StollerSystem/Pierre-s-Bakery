@@ -14,67 +14,61 @@ namespace Bakery
       Console.WriteLine("Bread: Single loaf $5 Buy 2 get 1 free!");
       Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5!");
       Console.WriteLine("\nPress any key to continue...");
-      Console.ReadLine();
-      // LOOP HERE AND SHOW CART 
+      Console.ReadLine();      
       PrintMenu();
       bool shopping = true;
       while (shopping)
-      {
-        // print cart here
-       PrintCart();    
-        // ORDER FORM        
+      {        
+       PrintCart();               
         string userInput = Console.ReadLine().ToLower();
-
-        switch (userInput)
-        {
-          case ("1"):
-            Bread sourDough = new Bread("Sour Dough");
-            ShoppingCart.AddBread(sourDough);
-            Console.WriteLine("\n*** Sour dough added! ***");
-            break;
-          case ("2"):
-            Bread wheat = new Bread("Wheat");
-            ShoppingCart.AddBread(wheat);
-            Console.WriteLine("\n*** Wheat added! ***");
-            break;
-          case ("3"):
-            Bread rye = new Bread("Rye");
-            ShoppingCart.AddBread(rye);
-            Console.WriteLine("\n*** Rye added! ***");
-            break;
-          case ("4"):
-            Pastry scone = new Pastry("Scone");
-            ShoppingCart.AddPastry(scone);
-            Console.WriteLine("\n*** Scone added! ***");
-            break;
-          case ("5"):
-            Pastry muffin = new Pastry("Muffin");
-            ShoppingCart.AddPastry(muffin);
-            Console.WriteLine("\n*** Muffin added! ***");
-            break;
-          case ("6"):
-            Pastry croissant = new Pastry("Croissant");
-            ShoppingCart.AddPastry(croissant);
-            Console.WriteLine("\n*** Croissant added! ***");
-            break;
-          case ("c"):
-            //CLEAR
-            Console.WriteLine("\n*** Cart cleared! ***");
-            ShoppingCart.ClearAll();
-            break;
-           case ("m"):
-            //Menu
-            PrintMenu();            
-            break;
-          case ("d"):
-            //DONE
-            Console.WriteLine("done!");
-            shopping = false;
-            break;
-          default:
-            Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want. Type 'm' to see the menu. ***");
-            break;
-        } 
+        shopping = UserInput(userInput);
+        // switch (userInput)
+        // {
+        //   case ("1"):
+        //     Bread sourDough = new Bread("Sour Dough");
+        //     ShoppingCart.AddBread(sourDough);
+        //     Console.WriteLine("\n*** Sour dough added! ***");
+        //     break;
+        //   case ("2"):
+        //     Bread wheat = new Bread("Wheat");
+        //     ShoppingCart.AddBread(wheat);
+        //     Console.WriteLine("\n*** Wheat added! ***");
+        //     break;
+        //   case ("3"):
+        //     Bread rye = new Bread("Rye");
+        //     ShoppingCart.AddBread(rye);
+        //     Console.WriteLine("\n*** Rye added! ***");
+        //     break;
+        //   case ("4"):
+        //     Pastry scone = new Pastry("Scone");
+        //     ShoppingCart.AddPastry(scone);
+        //     Console.WriteLine("\n*** Scone added! ***");
+        //     break;
+        //   case ("5"):
+        //     Pastry muffin = new Pastry("Muffin");
+        //     ShoppingCart.AddPastry(muffin);
+        //     Console.WriteLine("\n*** Muffin added! ***");
+        //     break;
+        //   case ("6"):
+        //     Pastry croissant = new Pastry("Croissant");
+        //     ShoppingCart.AddPastry(croissant);
+        //     Console.WriteLine("\n*** Croissant added! ***");
+        //     break;
+        //   case ("c"):            
+        //     Console.WriteLine("\n*** Cart cleared! ***");
+        //     ShoppingCart.ClearAll();
+        //     break;
+        //    case ("m"):            
+        //     PrintMenu();            
+        //     break;
+        //   case ("d"):            
+        //     Console.WriteLine("done!");
+        //     shopping = false;
+        //     break;
+        //   default:
+        //     Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want. Type 'm' to see the menu. ***");
+        //     break;
+        // } 
       }      
     }
     public static void PrintMenu()
@@ -127,6 +121,56 @@ namespace Bakery
       Console.WriteLine($"  [Grand Total: ${grandTotal}]");
       Console.WriteLine("----------------------"); 
       Console.WriteLine("(Type 'm' to see the menu, 'c' to clear the cart, and 'd' when done.)");
+    }
+
+    public static bool UserInput(string userInput)
+    {
+      switch (userInput)
+        {
+          case ("1"):
+            Bread sourDough = new Bread("Sour Dough");
+            ShoppingCart.AddBread(sourDough);
+            Console.WriteLine("\n*** Sour dough added! ***");
+            return true;
+          case ("2"):
+            Bread wheat = new Bread("Wheat");
+            ShoppingCart.AddBread(wheat);
+            Console.WriteLine("\n*** Wheat added! ***");
+            return true;
+          case ("3"):
+            Bread rye = new Bread("Rye");
+            ShoppingCart.AddBread(rye);
+            Console.WriteLine("\n*** Rye added! ***");
+            return true;
+          case ("4"):
+            Pastry scone = new Pastry("Scone");
+            ShoppingCart.AddPastry(scone);
+            Console.WriteLine("\n*** Scone added! ***");
+            return true;
+          case ("5"):
+            Pastry muffin = new Pastry("Muffin");
+            ShoppingCart.AddPastry(muffin);
+            Console.WriteLine("\n*** Muffin added! ***");
+            return true;
+          case ("6"):
+            Pastry croissant = new Pastry("Croissant");
+            ShoppingCart.AddPastry(croissant);
+            Console.WriteLine("\n*** Croissant added! ***");
+            return true;
+          case ("c"):            
+            Console.WriteLine("\n*** Cart cleared! ***");
+            ShoppingCart.ClearAll();
+            return true;
+           case ("m"):            
+            PrintMenu();            
+            return true;
+          case ("d"):            
+            Console.WriteLine("done!");
+            return false;
+          default:
+            Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want. Type 'm' to see the menu. ***");
+            return true;
+        } 
     }
   }
 }

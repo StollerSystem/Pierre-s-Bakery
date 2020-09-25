@@ -50,9 +50,7 @@ namespace Bakery
     public string Description { get; set; }
     public Bread(string description)
     {
-      Description = description;
-      
-      
+      Description = description;      
     }
 
     public static int GetPrice(int quantity)
@@ -60,9 +58,7 @@ namespace Bakery
       int btgoNumber = quantity/3;
       int fullPriceRemainder = quantity%3;          
       return btgoNumber*10+fullPriceRemainder*5;
-    }
-
-  
+    }  
   }
 
   public class Pastry
