@@ -16,7 +16,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Item()
     {
-      Pastry newPastry = new Pastry();
+      Pastry newPastry = new Pastry("test");
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
 
@@ -40,6 +40,12 @@ namespace Bakery.Tests
       Assert.AreEqual("Wheat", wheat.Description);
     }
 
+    [TestMethod]
 
+    public void Pastry_CreatePastryWithDescription_string()
+    {
+      Pastry scone = new Pastry("Scone");
+      Assert.AreEqual("Scone", scone.Description);
+    }
   }
 }

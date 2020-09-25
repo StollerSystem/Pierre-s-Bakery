@@ -34,6 +34,12 @@ namespace Bakery
 
   public class Pastry
   {
+    public string Description { get; set; }
+    public Pastry(string description)
+    {
+      Description = description;
+    }
+
     public static int GetPrice(int quantity)
     {      
       int three4Five = quantity/3;
