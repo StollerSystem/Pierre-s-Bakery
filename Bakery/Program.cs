@@ -91,21 +91,22 @@ namespace Bakery
 
             Bread sourDough = new Bread("Sour Dough Loaf");
 
-            int qty = 1;
+            // int qty = 1;
             if (inputSplit.Length > 1)
             {
-              bool canConvert = int.TryParse(inputSplit[1], out qty);
-              if (canConvert)
-              {                
-                for (int i = 0; i < qty; i++)
-                {
-                  ShoppingCart.AddBread(sourDough);                  
-                }
-                Console.WriteLine($"\n*** {qty.ToString()} Sour dough Loafs added! ***");
-              } else
-              {
-                Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
-              }
+              AddMultipleBread(inputSplit[1],sourDough);
+              // bool canConvert = int.TryParse(inputSplit[1], out qty);
+              // if (canConvert)
+              // {                
+              //   for (int i = 0; i < qty; i++)
+              //   {
+              //     ShoppingCart.AddBread(sourDough);                  
+              //   }
+              //   Console.WriteLine($"\n*** {qty.ToString()} Sour dough Loafs added! ***");
+              // } else
+              // {
+              //   Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
+              // }
             } else
             {
               ShoppingCart.AddBread(sourDough);            
@@ -118,21 +119,22 @@ namespace Bakery
           case ("2"):
             Bread wheat = new Bread("Wheat Loaf");
 
-            int qty2 = 1;
+            // int qty2 = 1;
             if (inputSplit.Length > 1)
             {
-              bool canConvert = int.TryParse(inputSplit[1], out qty2);
-              if (canConvert)
-              {                
-                for (int i = 0; i < qty2; i++)
-                {
-                  ShoppingCart.AddBread(wheat);                  
-                }
-                Console.WriteLine($"\n*** {qty2.ToString()} Sour Wheat Loafs added! ***");
-              } else
-              {
-                Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
-              }
+              AddMultipleBread(inputSplit[1],wheat);
+              // bool canConvert = int.TryParse(inputSplit[1], out qty2);
+              // if (canConvert)
+              // {                
+              //   for (int i = 0; i < qty2; i++)
+              //   {
+              //     ShoppingCart.AddBread(wheat);                  
+              //   }
+              //   Console.WriteLine($"\n*** {qty2.ToString()} Sour Wheat Loafs added! ***");
+              // } else
+              // {
+              //   Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
+              // }
             } else
             {
               ShoppingCart.AddBread(wheat);
@@ -211,6 +213,23 @@ namespace Bakery
       Console.WriteLine($"        [You Saved: ${saveTotal}!!!]\n");      
       Console.WriteLine("         <<<Thank you!>>>");
       Console.WriteLine("----------------------------------");
+    }
+
+    public static void AddMultipleBread(string quantity, Bread bread)
+    {
+      int qty = 1;
+      bool canConvert = int.TryParse(quantity, out qty);
+      if (canConvert)
+      {                
+        for (int i = 0; i < qty; i++)
+        {
+          ShoppingCart.AddBread(bread);                  
+        }
+        Console.WriteLine($"\n*** {qty.ToString()} {bread.Description}s added! ***");
+      } else
+      {
+        Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
+      }
     }
   }
 }
