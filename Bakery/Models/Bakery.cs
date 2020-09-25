@@ -11,8 +11,13 @@ namespace Bakery
     public static List<Pastry> _pastryCart = new List<Pastry> {};
 
     public static void AddBread(Bread Bread)
-    {
+    {      
       _breadCart.Add(Bread);
+    }
+
+    public static void AddPastry(Pastry Pastry)
+    {      
+      _pastryCart.Add(Pastry);
     }
 
 
@@ -25,6 +30,7 @@ namespace Bakery
     public Bread(string description)
     {
       Description = description;
+      
       
     }
 

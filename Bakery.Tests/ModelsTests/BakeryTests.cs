@@ -55,5 +55,13 @@ namespace Bakery.Tests
       ShoppingCart.AddBread(sourDough);
       Assert.AreEqual(sourDough.Description,ShoppingCart._breadCart[0].Description);
     }
+
+    [TestMethod]
+    public void ShoppingCart_AddPastryToList_Pastry()
+    {
+     Pastry muffin = new Pastry("Muffin");
+      ShoppingCart.AddPastry(muffin);
+      Assert.AreEqual(muffin.Description,ShoppingCart._pastryCart[0].Description);
+    }
   }
 }
