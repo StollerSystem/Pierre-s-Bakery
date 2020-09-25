@@ -10,7 +10,7 @@ namespace Bakery
       Console.WriteLine("\n\n----------------------------------------");
       Console.WriteLine("|  *** Welcome to Pierre's Bakery ***  |");
       Console.WriteLine("----------------------------------------");
-      Console.WriteLine("\n-------------[Our Prices:]-------------");
+      Console.WriteLine("\n--------------[Our Prices:]-------------");
       // Console.WriteLine("[Our Prices:]");
       Console.WriteLine("Bread: Single loaf $5 (Buy 2 get 1 free!)");
       Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5!");
@@ -64,20 +64,20 @@ namespace Bakery
         }  
         int breadQuantity = ShoppingCart.GetBread().Count;
         int breadSubTotal = Bread.GetPrice(breadQuantity);
-        Console.WriteLine($"  [Bread subtotal: ${breadSubTotal.ToString()}]\n"); 
+        Console.WriteLine($" [Bread subtotal: ${breadSubTotal.ToString()}]\n"); 
         foreach (Pastry pastry in pastryCart)
         {
           Console.WriteLine($" *({pastry.Description})");
         }
         int pastryQuantity = ShoppingCart.GetPastry().Count;
         int pastrySubTotal = Pastry.GetPrice(pastryQuantity);
-        Console.WriteLine($"  [Pastry subtotal: ${pastrySubTotal.ToString()}]");
+        Console.WriteLine($" [Pastry subtotal: ${pastrySubTotal.ToString()}]");
       }
       string grandTotal = ShoppingCart.GetTotal().ToString();
       Console.WriteLine("----------------------"); 
       Console.WriteLine($"  [Grand Total: ${grandTotal}]");
       Console.WriteLine("----------------------"); 
-      Console.WriteLine("(Type 'm' to see the menu, 'c' to clear the cart, and 'd' when done.)");
+      Console.WriteLine("\n(Type 'm' to see the menu, 'c' to clear the cart, and 'd' when done.)");
     }
 
     public static bool UserInput(string userInput)
@@ -85,35 +85,35 @@ namespace Bakery
       switch (userInput)
         {
           case ("1"):
-            Bread sourDough = new Bread("Sour Dough");
+            Bread sourDough = new Bread("Sour Dough Loaf");
             ShoppingCart.AddBread(sourDough);
             // PrintCart();
-            Console.WriteLine("\n*** Sour dough added! ***");
+            Console.WriteLine("\n*** Sour dough Loaf added! ***");
             return true;
           case ("2"):
-            Bread wheat = new Bread("Wheat");
+            Bread wheat = new Bread("Wheat Loaf");
             ShoppingCart.AddBread(wheat);
-            Console.WriteLine("\n*** Wheat added! ***");
+            Console.WriteLine("\n*** Wheat Loaf added! ***");
             return true;
           case ("3"):
-            Bread rye = new Bread("Rye");
+            Bread rye = new Bread("Rye Loaf");
             ShoppingCart.AddBread(rye);
-            Console.WriteLine("\n*** Rye added! ***");
+            Console.WriteLine("\n*** Rye Loaf added! ***");
             return true;
           case ("4"):
-            Pastry scone = new Pastry("Scone");
+            Pastry scone = new Pastry("Scone Pastry");
             ShoppingCart.AddPastry(scone);
-            Console.WriteLine("\n*** Scone added! ***");
+            Console.WriteLine("\n*** Scone Pastry added! ***");
             return true;
           case ("5"):
-            Pastry muffin = new Pastry("Muffin");
+            Pastry muffin = new Pastry("Muffin Pastry");
             ShoppingCart.AddPastry(muffin);
-            Console.WriteLine("\n*** Muffin added! ***");
+            Console.WriteLine("\n*** Muffin Pastry added! ***");
             return true;
           case ("6"):
-            Pastry croissant = new Pastry("Croissant");
+            Pastry croissant = new Pastry("Croissant Pastry");
             ShoppingCart.AddPastry(croissant);
-            Console.WriteLine("\n*** Croissant added! ***");
+            Console.WriteLine("\n*** Croissant Pastry added! ***");
             return true;
           case ("c"):            
             Console.WriteLine("\n*** Cart cleared! ***");
@@ -136,19 +136,18 @@ namespace Bakery
 
     public static void CheckOut()
     {
-      int breadQuantity = ShoppingCart.GetBread().Count*5;
-      int pastryQuantity = ShoppingCart.GetPastry().Count*2;
+      int breadQuantity = ShoppingCart.GetBread().Count;
+      int pastryQuantity = ShoppingCart.GetPastry().Count;
       int grandTotal = ShoppingCart.GetTotal();
       string stringTotal = ShoppingCart.GetTotal().ToString();
-      string saveTotal = (breadQuantity+pastryQuantity-grandTotal).ToString();
+      string saveTotal = (breadQuantity*5+pastryQuantity*2-grandTotal).ToString();
 
 
-      Console.WriteLine("\n\n\n------------[Checkout]------------\n");
-      // Console.WriteLine("");
-      Console.WriteLine($"       [Grand Total: ${grandTotal}]\n");
-      Console.WriteLine($"       [You Saved: ${saveTotal}!!!]\n");
-      // Console.WriteLine("                                ");
-      Console.WriteLine("            Thank you!");
+      Console.WriteLine("\n\n\n------------[Checkout]-------------\n");
+      Console.WriteLine($"   [Bread Qty: {breadQuantity.ToString()} / Pastry Qty: {pastryQuantity.ToString()}]\n");
+      Console.WriteLine($"        [Grand Total: ${grandTotal}]\n");
+      Console.WriteLine($"        [You Saved: ${saveTotal}!!!]\n");      
+      Console.WriteLine("         1<<<Thank you!>>>");
       Console.WriteLine("----------------------------------");
 
     }

@@ -61,7 +61,7 @@ Then the checkout display will return the total cost of the order and how much y
 
 ## Known Bugs
 
-
+None at the moment
 
 ## Support and contact details
 
@@ -79,5 +79,5 @@ MSTest
 
 MIT
 
-Copyright (c) 2020 **_{Ben Stoller}_**
+Copyright (c) 2020 **_Ben Stoller_**
 
