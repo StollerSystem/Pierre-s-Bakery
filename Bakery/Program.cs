@@ -144,21 +144,22 @@ namespace Bakery
 
           case ("3"):
             Bread rye = new Bread("Rye Loaf");
-            int qty3 = 1;
+            // int qty3 = 1;
             if (inputSplit.Length > 1)
             {
-              bool canConvert = int.TryParse(inputSplit[1], out qty3);
-              if (canConvert)
-              {                
-                for (int i = 0; i < qty3; i++)
-                {
-                  ShoppingCart.AddBread(rye);                  
-                }
-                Console.WriteLine($"\n*** {qty3.ToString()} Sour Rye Loafs added! ***");
-              } else
-              {
-                Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
-              }
+              AddMultipleBread(inputSplit[1],rye);
+              // bool canConvert = int.TryParse(inputSplit[1], out qty3);
+              // if (canConvert)
+              // {                
+              //   for (int i = 0; i < qty3; i++)
+              //   {
+              //     ShoppingCart.AddBread(rye);                  
+              //   }
+              //   Console.WriteLine($"\n*** {qty3.ToString()} Sour Rye Loafs added! ***");
+              // } else
+              // {
+              //   Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
+              // }
             } else
             {
               ShoppingCart.AddBread(rye);
