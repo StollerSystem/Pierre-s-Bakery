@@ -72,7 +72,7 @@ namespace Bakery
             shopping = false;
             break;
           default:
-            Console.WriteLine("Sorry please try again...type the NUMBER of the item you want. Type 'm' to see the menu.");
+            Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want. Type 'm' to see the menu. ***");
             break;
         } 
       }      
@@ -86,9 +86,10 @@ namespace Bakery
         Console.WriteLine("'4' to add Scone Pastry");
         Console.WriteLine("'5' to add Muffin Pastry");
         Console.WriteLine("'6' to add Croissant Pastry");
-        Console.WriteLine("Type 'c' to clear your cart!");
-        Console.WriteLine("Type 'm' to see the menu!");
-        Console.WriteLine("Type 'd' when you're done!");
+        Console.WriteLine("--------------------------");
+        Console.WriteLine("Type 'c' to clear your cart");
+        Console.WriteLine("Type 'm' to see the menu");
+        Console.WriteLine("Type 'd' when you're done");
         Console.WriteLine("--------------------------");
         Console.WriteLine("\n(Type the number, then hit enter to add the item to your cart)");
       }
@@ -96,7 +97,8 @@ namespace Bakery
     public static void PrintCart()
     {
       Console.WriteLine("\n----------------------");
-      Console.WriteLine("Shpping Cart: ");
+      Console.WriteLine("   [Shpping Cart:] ");
+      Console.WriteLine("----------------------");
       List<Bread> breadCart = ShoppingCart.GetBread();
       List<Pastry> pastryCart = ShoppingCart.GetPastry();
       if (breadCart.Count == 0 && pastryCart.Count == 0)
@@ -122,7 +124,7 @@ namespace Bakery
       }
       string grandTotal = ShoppingCart.GetTotal().ToString();
       Console.WriteLine("----------------------"); 
-      Console.WriteLine($"  [Grand Total: ${grandTotal}");
+      Console.WriteLine($"  [Grand Total: ${grandTotal}]");
       Console.WriteLine("----------------------"); 
       Console.WriteLine("(Type 'm' to see the menu, 'c' to clear the cart, and 'd' when done.)");
     }

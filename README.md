@@ -1,17 +1,20 @@
 # _Pierre's Bakery_
 
-#### _A C# console app for a bakery_ {09/25/20}_
+#### _A C# console app for a bakery_ 09/25/20
 
-#### By _**{Ben Stoller}**_
+#### By _**Ben Stoller**_
 
 ## Description
 
 When the user runs the application, they will receive a prompt with a welcome message along with the cost for both Bread and Pastry.
-A user will then be able to specify how many loaves of Bread and how many Pastrys they'd like.
-The application will return the total cost of the order.
 Pierre offers the following deals:
 Bread: Buy 2, get 1 free. A single loaf costs $5.
 Pastry: Buy 1 for \$2 or 3 for $5.
+After pressing a key to continue the user will be presented with a menu.
+A user will then be able to specify how many loaves of Bread and how many Pastrys they'd like.
+On the menu it lists all the bread/pastry for sale as well as the number to enter to add it to your cart. 
+There are also the commands 'c' to clear the cart, 'm' to see the menu again, and 'd' for when you are done.
+The application will return the total cost of the order.
 
 ## Specs
 
@@ -41,31 +44,29 @@ Pastry: Buy 1 for \$2 or 3 for $5.
 
 * 11 Return the total cost of the order:
     * input: 5 bread and 5 pastry
-    * output: 34
+    * output: 29
 
 ## Setup/Installation Requirements
 
+* You will need to download and install .NET Core SDK (Software Development Kit) for your OS if you don't have it already.
 * Clone this repo down to your machine 
-* Navigate to the "Bakery.Tests" directory and run $ dotnet restore to create obj directories in both production and test projects. Do not touch this code.
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Navigate to the "Bakery.Solutions/Bakery.Tests" directory and run "$ dotnet restore" to create obj directories in both production and test projects. Do not touch this code.
+* Navigate to the "Bakery.Solutions/Bakery and type the command "$ dotnet run" to run the program!
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+https://github.com/StollerSystem
 
 ## Technologies Used
 
 VSCode
 C#
-.NET Core
+.NET Core SDK
 MSTest
 
 
