@@ -10,8 +10,7 @@ namespace Bakery
       Console.WriteLine("\n\n----------------------------------------");
       Console.WriteLine("|  *** Welcome to Pierre's Bakery ***  |");
       Console.WriteLine("----------------------------------------");
-      Console.WriteLine("\n--------------[Our Prices:]-------------");
-      // Console.WriteLine("[Our Prices:]");
+      Console.WriteLine("\n--------------[Our Prices:]-------------");      
       Console.WriteLine("Bread: Single loaf $5 (Buy 2 get 1 free!)");
       Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5!");
       Console.WriteLine("----------------------------------------");
@@ -20,8 +19,7 @@ namespace Bakery
       PrintMenu();
       bool shopping = true;
       while (shopping)
-      {        
-       //PrintCart();               
+      {                     
         string userInput = Console.ReadLine().ToLower();
         shopping = UserInput(userInput);        
       }
@@ -86,8 +84,7 @@ namespace Bakery
         {
           case ("1"):
             Bread sourDough = new Bread("Sour Dough Loaf");
-            ShoppingCart.AddBread(sourDough);
-            // PrintCart();
+            ShoppingCart.AddBread(sourDough);            
             Console.WriteLine("\n*** Sour dough Loaf added! ***");
             return true;
           case ("2"):
@@ -141,15 +138,12 @@ namespace Bakery
       int grandTotal = ShoppingCart.GetTotal();
       string stringTotal = ShoppingCart.GetTotal().ToString();
       string saveTotal = (breadQuantity*5+pastryQuantity*2-grandTotal).ToString();
-
-
       Console.WriteLine("\n\n\n------------[Checkout]-------------\n");
       Console.WriteLine($"   [Bread Qty: {breadQuantity.ToString()} / Pastry Qty: {pastryQuantity.ToString()}]\n");
       Console.WriteLine($"        [Grand Total: ${grandTotal}]\n");
       Console.WriteLine($"        [You Saved: ${saveTotal}!!!]\n");      
       Console.WriteLine("         1<<<Thank you!>>>");
       Console.WriteLine("----------------------------------");
-
     }
   }
 }
