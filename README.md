@@ -12,13 +12,16 @@ Bread: Buy 2, get 1 free. A single loaf costs $5.
 Pastry: Buy 1 for \$2 or 3 for $5.
 
 After pressing a key to continue the user will be presented with a menu.
-A user will then be able to specify how many loaves of Bread and how many Pastrys they'd like by typing in commands. 
-On the menu it lists all the bread/pastry for sale as well as the number to enter to add it to your cart. 
-There are also the commands:
+On the menu it lists all the bread/pastry for sale as well as the key number to enter to add it to your cart. 
+The user can add a single item OR if they follow the item number with a quantity - they can add multiple items at once. Example:
+* Typing '3 10' will add 10 Rye Loafs (#3) 
+
+There are also these commands:
 * 's' to view the shopping cart 
 * 'c' to clear the cart
 * 'm' to see the menu again
 * 'd' for when you are done and want to checkout 
+
 Then the checkout display will return the total cost of the order and how much you saved! 
 
 ## Specs
