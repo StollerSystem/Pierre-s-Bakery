@@ -5,11 +5,13 @@ namespace Bakery
 {
   public class Bread
   {
-    public int GetPrice(int quantity)
+    public static int GetPrice(int quantity)
     {
-      int number = Math.Floor(quantity/3);
+      int number = quantity/3;
       int remainder = quantity%3;
-      Console.WriteLine(number,remainder);
+      Console.WriteLine(number.ToString());
+      Console.WriteLine(remainder.ToString());
+      return 5;
     }
   }
 
