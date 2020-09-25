@@ -80,13 +80,36 @@ namespace Bakery
 
     public static bool UserInput(string userInput)
     {
-      switch (userInput)
+      string[] inputSplit = userInput.Split(' ');
+
+      switch (inputSplit[0])
         {
           case ("1"):
+
             Bread sourDough = new Bread("Sour Dough Loaf");
+
+            int qty = 1;
+            if (inputSplit.Length > 1)
+            {
+              bool canConvert = int.TryParse(inputSplit[1], out qty);
+              if (canConvert)
+              {
+                Console.WriteLine("Qty:"+qty.ToString());
+                for (int i = 0; i < qty; i++)
+                {
+                  ShoppingCart.AddBread(sourDough);
+                  Console.WriteLine("\n*** Sour dough Loaf added! ***"); 
+                }
+                Console.WriteLine($"\n*** {qty.ToString()} Sour dough Loafs added! ***");
+              }
+            }  
+
             ShoppingCart.AddBread(sourDough);            
             Console.WriteLine("\n*** Sour dough Loaf added! ***");
             return true;
+
+
+
           case ("2"):
             Bread wheat = new Bread("Wheat Loaf");
             ShoppingCart.AddBread(wheat);
@@ -138,7 +161,7 @@ namespace Bakery
       int grandTotal = ShoppingCart.GetTotal();
       string stringTotal = ShoppingCart.GetTotal().ToString();
       string saveTotal = (breadQuantity*5+pastryQuantity*2-grandTotal).ToString();
-      Console.WriteLine("\n\n\n------------[Checkout]-------------\n");
+      Console.WriteLine("\n\n------------[Checkout]-------------\n");
       Console.WriteLine($"   [Bread Qty: {breadQuantity.ToString()} / Pastry Qty: {pastryQuantity.ToString()}]\n");
       Console.WriteLine($"        [Grand Total: ${grandTotal}]\n");
       Console.WriteLine($"        [You Saved: ${saveTotal}!!!]\n");      
