@@ -93,19 +93,21 @@ namespace Bakery
             {
               bool canConvert = int.TryParse(inputSplit[1], out qty);
               if (canConvert)
-              {
-                Console.WriteLine("Qty:"+qty.ToString());
+              {                
                 for (int i = 0; i < qty; i++)
                 {
-                  ShoppingCart.AddBread(sourDough);
-                  Console.WriteLine("\n*** Sour dough Loaf added! ***"); 
+                  ShoppingCart.AddBread(sourDough);                  
                 }
                 Console.WriteLine($"\n*** {qty.ToString()} Sour dough Loafs added! ***");
+              } else
+              {
+                Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
               }
-            }  
-
-            ShoppingCart.AddBread(sourDough);            
-            Console.WriteLine("\n*** Sour dough Loaf added! ***");
+            } else
+            {
+              ShoppingCart.AddBread(sourDough);            
+              Console.WriteLine("\n*** Sour dough Loaf added! ***");
+            }   
             return true;
 
 
