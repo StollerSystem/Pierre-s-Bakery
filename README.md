@@ -14,8 +14,12 @@ Pastry: Buy 1 for \$2 or 3 for $5.
 After pressing a key to continue the user will be presented with a menu.
 A user will then be able to specify how many loaves of Bread and how many Pastrys they'd like by typing in commands. 
 On the menu it lists all the bread/pastry for sale as well as the number to enter to add it to your cart. 
-There are also the commands 'c' to clear the cart, 'm' to see the menu again, and 'd' for when you are done.
-The application will return the total cost of the order.
+There are also the commands:
+* 's' to view the shopping cart 
+* 'c' to clear the cart
+* 'm' to see the menu again
+* 'd' for when you are done and want to checkout 
+Then the checkout display will return the total cost of the order and how much you saved! 
 
 ## Specs
 

@@ -64,7 +64,7 @@ namespace Bakery
         }  
         int breadQuantity = ShoppingCart.GetBread().Count;
         int breadSubTotal = Bread.GetPrice(breadQuantity);
-        Console.WriteLine($"  [Bread subtotal: ${breadSubTotal.ToString()}]"); 
+        Console.WriteLine($"  [Bread subtotal: ${breadSubTotal.ToString()}]\n"); 
         foreach (Pastry pastry in pastryCart)
         {
           Console.WriteLine($" *({pastry.Description})");
@@ -123,7 +123,7 @@ namespace Bakery
             PrintMenu();            
             return true;
           case ("d"):            
-            Console.WriteLine("*** Proceeding to Checkout ***");
+            Console.WriteLine("\n*** Proceeding to Checkout ***");
             return false;
           case ("s"):            
             PrintCart();
@@ -136,7 +136,21 @@ namespace Bakery
 
     public static void CheckOut()
     {
-      Console.WriteLine("Thank you!");
+      int breadQuantity = ShoppingCart.GetBread().Count*5;
+      int pastryQuantity = ShoppingCart.GetPastry().Count*2;
+      int grandTotal = ShoppingCart.GetTotal();
+      string stringTotal = ShoppingCart.GetTotal().ToString();
+      string saveTotal = (breadQuantity+pastryQuantity-grandTotal).ToString();
+
+
+      Console.WriteLine("\n\n\n------------[Checkout]------------\n");
+      // Console.WriteLine("");
+      Console.WriteLine($"       [Grand Total: ${grandTotal}]\n");
+      Console.WriteLine($"       [You Saved: ${saveTotal}!!!]\n");
+      // Console.WriteLine("                                ");
+      Console.WriteLine("            Thank you!");
+      Console.WriteLine("----------------------------------");
+
     }
   }
 }
