@@ -99,16 +99,14 @@ namespace Bakery.Tests
       ShoppingCart.AddBread(sourDough);
       ShoppingCart.AddBread(sourDough);
       ShoppingCart.AddBread(sourDough);
-      List<Bread> breadCart = ShoppingCart.GetBread();
-      Console.WriteLine(breadCart.Count);
+      List<Bread> breadCart = ShoppingCart.GetBread();      
       Pastry muffin = new Pastry("Muffin");
       ShoppingCart.AddPastry(muffin);
       ShoppingCart.AddPastry(muffin);
       ShoppingCart.AddPastry(muffin);
       ShoppingCart.AddPastry(muffin);
       ShoppingCart.AddPastry(muffin);
-      List<Pastry> pastryCart = ShoppingCart.GetPastry();
-      Console.WriteLine(pastryCart.Count);
+      List<Pastry> pastryCart = ShoppingCart.GetPastry();      
       int total = ShoppingCart.GetTotal();
       Assert.AreEqual(29,total);
     }
