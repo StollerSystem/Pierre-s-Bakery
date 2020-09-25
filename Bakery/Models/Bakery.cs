@@ -7,8 +7,13 @@ namespace Bakery
 {
   public class ShoppingCart 
   {
-    private static List<Bread> _breadCart = new List<Bread> {};
-    private static List<Pastry> _pastryCart = new List<Pastry> {};
+    public static List<Bread> _breadCart = new List<Bread> {};
+    public static List<Pastry> _pastryCart = new List<Pastry> {};
+
+    public static void AddBread(Bread Bread)
+    {
+      _breadCart.Add(Bread);
+    }
 
 
   }
@@ -20,6 +25,7 @@ namespace Bakery
     public Bread(string description)
     {
       Description = description;
+      
     }
 
     public static int GetPrice(int quantity)
