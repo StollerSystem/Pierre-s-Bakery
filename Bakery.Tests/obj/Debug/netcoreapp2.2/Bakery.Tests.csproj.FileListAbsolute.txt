@@ -1,0 +1,4 @@
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.csprojAssemblyReference.cache
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.AssemblyInfoInputs.cache
+C:\Users\Owner\Epicodus\C#\friday_projects\Bakery.Solution\Bakery.Tests\obj\Debug\netcoreapp2.2\Bakery.Tests.AssemblyInfo.cs
