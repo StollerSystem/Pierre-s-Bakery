@@ -13,6 +13,20 @@ Pierre offers the following deals:
 Bread: Buy 2, get 1 free. A single loaf costs $5.
 Pastry: Buy 1 for \$2 or 3 for $5.
 
+## Specs
+
+* Constructor will create a "Bread" Object
+
+* Constructor will create a "Pastry" Object 
+
+* Get Price from Bread and Pastry Obects
+
+* Add a Bread or Pastry Object to shopping cart (list)
+
+* Return the total cost of the order:
+    *  Bread: Buy 2, get 1 free. A single loaf costs $5.
+    *  Pastry: Buy 1 for $2 or 3 for $5.
+
 ## Setup/Installation Requirements
 
 * Clone this repo down to your machine 
