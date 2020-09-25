@@ -7,17 +7,17 @@ namespace Bakery.Tests
   public class BakeryTests
   {
     [TestMethod]
-    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
       Bread newBread = new Bread();
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
     [TestMethod]
-    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    public void PastryConstructor_CreatesInstanceOfPastry_Item()
     {
-      Pastry newBread = new Pastry();
-      Assert.AreEqual(typeof(Pastry), newBread.GetType());
+      Pastry newPastry = new Pastry();
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
   }
 }
