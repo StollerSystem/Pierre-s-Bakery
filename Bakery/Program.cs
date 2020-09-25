@@ -42,6 +42,8 @@ namespace Bakery
         Console.WriteLine("Type 'd' when you're done");
         Console.WriteLine("----------------------------");
         Console.WriteLine("\n(Type the number, then hit enter to add the item to your cart)");
+        Console.WriteLine("(If wanting to add multiple items, follow the number with a quantity)");
+        Console.WriteLine("(Example: typing '1 6' will add 6 Sour Dough Loafs)");
       }
 
     public static void PrintCart()
@@ -76,6 +78,7 @@ namespace Bakery
       Console.WriteLine($"  [Grand Total: ${grandTotal}]");
       Console.WriteLine("----------------------"); 
       Console.WriteLine("\n(Type 'm' to see the menu, 'c' to clear the cart, and 'd' when done.)");
+      
     }
 
     public static bool UserInput(string userInput)
@@ -114,14 +117,53 @@ namespace Bakery
 
           case ("2"):
             Bread wheat = new Bread("Wheat Loaf");
-            ShoppingCart.AddBread(wheat);
-            Console.WriteLine("\n*** Wheat Loaf added! ***");
+
+            int qty2 = 1;
+            if (inputSplit.Length > 1)
+            {
+              bool canConvert = int.TryParse(inputSplit[1], out qty2);
+              if (canConvert)
+              {                
+                for (int i = 0; i < qty2; i++)
+                {
+                  ShoppingCart.AddBread(wheat);                  
+                }
+                Console.WriteLine($"\n*** {qty2.ToString()} Sour Wheat Loafs added! ***");
+              } else
+              {
+                Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
+              }
+            } else
+            {
+              ShoppingCart.AddBread(wheat);
+              Console.WriteLine("\n*** Wheat Loaf added! ***");
+            }            
             return true;
+
           case ("3"):
             Bread rye = new Bread("Rye Loaf");
-            ShoppingCart.AddBread(rye);
-            Console.WriteLine("\n*** Rye Loaf added! ***");
+            int qty3 = 1;
+            if (inputSplit.Length > 1)
+            {
+              bool canConvert = int.TryParse(inputSplit[1], out qty3);
+              if (canConvert)
+              {                
+                for (int i = 0; i < qty3; i++)
+                {
+                  ShoppingCart.AddBread(rye);                  
+                }
+                Console.WriteLine($"\n*** {qty3.ToString()} Sour Rye Loafs added! ***");
+              } else
+              {
+                Console.WriteLine("\n*** Sorry please try again...type the NUMBER of the item you want, followed by quantity. Type 'm' to see the menu. ***");
+              }
+            } else
+            {
+              ShoppingCart.AddBread(rye);
+              Console.WriteLine("\n*** Rye Loaf added! ***");
+            }            
             return true;
+            
           case ("4"):
             Pastry scone = new Pastry("Scone Pastry");
             ShoppingCart.AddPastry(scone);
@@ -167,7 +209,7 @@ namespace Bakery
       Console.WriteLine($"   [Bread Qty: {breadQuantity.ToString()} / Pastry Qty: {pastryQuantity.ToString()}]\n");
       Console.WriteLine($"        [Grand Total: ${grandTotal}]\n");
       Console.WriteLine($"        [You Saved: ${saveTotal}!!!]\n");      
-      Console.WriteLine("         1<<<Thank you!>>>");
+      Console.WriteLine("         <<<Thank you!>>>");
       Console.WriteLine("----------------------------------");
     }
   }
